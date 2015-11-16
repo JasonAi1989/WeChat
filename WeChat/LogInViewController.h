@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LogInViewController.h
 //  WeChat
 //
 //  Created by jason on 15/11/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LogInViewController : UIViewController
 
 @end
-
