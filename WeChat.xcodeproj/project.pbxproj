@@ -21,6 +21,8 @@
 		965805EF1BF9F400003D4547 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805E61BF9F400003D4547 /* DiscoverTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F01BF9F400003D4547 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805E81BF9F400003D4547 /* LogInViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805EA1BF9F400003D4547 /* MeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		965805F81BFA01FB003D4547 /* LogUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F71BFA01FB003D4547 /* LogUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		965805E91BF9F400003D4547 /* MeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewController.h; sourceTree = "<group>"; };
 		965805EA1BF9F400003D4547 /* MeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewController.m; sourceTree = "<group>"; };
 		965805EB1BF9F400003D4547 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		965805F31BF9FFBC003D4547 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		965805F41BF9FFBC003D4547 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		965805F61BFA01FB003D4547 /* LogUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUpViewController.h; sourceTree = "<group>"; };
+		965805F71BFA01FB003D4547 /* LogUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +132,14 @@
 				965805E21BF9F400003D4547 /* ContactsTableViewController.m */,
 				965805E51BF9F400003D4547 /* DiscoverTableViewController.h */,
 				965805E61BF9F400003D4547 /* DiscoverTableViewController.m */,
-				965805E71BF9F400003D4547 /* LogInViewController.h */,
-				965805E81BF9F400003D4547 /* LogInViewController.m */,
 				965805E91BF9F400003D4547 /* MeTableViewController.h */,
 				965805EA1BF9F400003D4547 /* MeTableViewController.m */,
+				965805F61BFA01FB003D4547 /* LogUpViewController.h */,
+				965805F71BFA01FB003D4547 /* LogUpViewController.m */,
+				965805E71BF9F400003D4547 /* LogInViewController.h */,
+				965805E81BF9F400003D4547 /* LogInViewController.m */,
+				965805F31BF9FFBC003D4547 /* LaunchViewController.h */,
+				965805F41BF9FFBC003D4547 /* LaunchViewController.m */,
 				965805AC1BF9F36A003D4547 /* AppDelegate.h */,
 				965805AD1BF9F36A003D4547 /* AppDelegate.m */,
 				965805B21BF9F36A003D4547 /* Main.storyboard */,
@@ -310,7 +320,9 @@
 			files = (
 				965805EE1BF9F400003D4547 /* DbManager.m in Sources */,
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
+				965805F81BFA01FB003D4547 /* LogUpViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
+				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
 				965805AE1BF9F36A003D4547 /* AppDelegate.m in Sources */,
 				965805F01BF9F400003D4547 /* LogInViewController.m in Sources */,
 				965805AB1BF9F36A003D4547 /* main.m in Sources */,

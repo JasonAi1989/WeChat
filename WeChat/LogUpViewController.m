@@ -1,24 +1,22 @@
 //
-//  LogInViewController.m
+//  LogUpViewController.m
 //  WeChat
 //
 //  Created by jason on 15/11/16.
 //  Copyright © 2015年 JasonAi. All rights reserved.
 //
 
-#import "LogInViewController.h"
+#import "LogUpViewController.h"
 
-@interface LogInViewController ()
+@interface LogUpViewController ()
 
 @end
 
-@implementation LogInViewController
+@implementation LogUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self UILayout];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,8 +34,4 @@
 }
 */
 
--(void)UILayout{
-    self.navigationController.navigationBar.hidden = false;
-    
-}
 @end
