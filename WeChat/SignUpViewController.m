@@ -1,18 +1,18 @@
 //
-//  LogUpViewController.m
+//  SignUpViewController.m
 //  WeChat
 //
-//  Created by jason on 15/11/16.
+//  Created by jason on 15/11/17.
 //  Copyright © 2015年 JasonAi. All rights reserved.
 //
 
-#import "LogUpViewController.h"
+#import "SignUpViewController.h"
 
-@interface LogUpViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation LogUpViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

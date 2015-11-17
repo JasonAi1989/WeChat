@@ -22,7 +22,7 @@
 		965805F01BF9F400003D4547 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805E81BF9F400003D4547 /* LogInViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805EA1BF9F400003D4547 /* MeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
-		965805F81BFA01FB003D4547 /* LogUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F71BFA01FB003D4547 /* LogUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966212D31BFB3F2800F06E89 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +73,8 @@
 		965805EB1BF9F400003D4547 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		965805F31BF9FFBC003D4547 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		965805F41BF9FFBC003D4547 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
-		965805F61BFA01FB003D4547 /* LogUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUpViewController.h; sourceTree = "<group>"; };
-		965805F71BFA01FB003D4547 /* LogUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogUpViewController.m; sourceTree = "<group>"; };
+		966212D21BFB3F2800F06E89 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		966212D31BFB3F2800F06E89 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +125,7 @@
 		965805A81BF9F36A003D4547 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				966212D11BFB3E3C00F06E89 /* Launch */,
 				965805F21BF9F410003D4547 /* common */,
 				965805DF1BF9F400003D4547 /* ChatsTableTableViewController.h */,
 				965805E01BF9F400003D4547 /* ChatsTableTableViewController.m */,
@@ -134,12 +135,6 @@
 				965805E61BF9F400003D4547 /* DiscoverTableViewController.m */,
 				965805E91BF9F400003D4547 /* MeTableViewController.h */,
 				965805EA1BF9F400003D4547 /* MeTableViewController.m */,
-				965805F61BFA01FB003D4547 /* LogUpViewController.h */,
-				965805F71BFA01FB003D4547 /* LogUpViewController.m */,
-				965805E71BF9F400003D4547 /* LogInViewController.h */,
-				965805E81BF9F400003D4547 /* LogInViewController.m */,
-				965805F31BF9FFBC003D4547 /* LaunchViewController.h */,
-				965805F41BF9FFBC003D4547 /* LaunchViewController.m */,
 				965805AC1BF9F36A003D4547 /* AppDelegate.h */,
 				965805AD1BF9F36A003D4547 /* AppDelegate.m */,
 				965805B21BF9F36A003D4547 /* Main.storyboard */,
@@ -186,6 +181,19 @@
 				965805E41BF9F400003D4547 /* DbManager.m */,
 			);
 			name = common;
+			sourceTree = "<group>";
+		};
+		966212D11BFB3E3C00F06E89 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				966212D21BFB3F2800F06E89 /* SignUpViewController.h */,
+				966212D31BFB3F2800F06E89 /* SignUpViewController.m */,
+				965805E71BF9F400003D4547 /* LogInViewController.h */,
+				965805E81BF9F400003D4547 /* LogInViewController.m */,
+				965805F31BF9FFBC003D4547 /* LaunchViewController.h */,
+				965805F41BF9FFBC003D4547 /* LaunchViewController.m */,
+			);
+			name = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +328,6 @@
 			files = (
 				965805EE1BF9F400003D4547 /* DbManager.m in Sources */,
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
-				965805F81BFA01FB003D4547 /* LogUpViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
 				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
 				965805AE1BF9F36A003D4547 /* AppDelegate.m in Sources */,
@@ -328,6 +335,7 @@
 				965805AB1BF9F36A003D4547 /* main.m in Sources */,
 				965805EF1BF9F400003D4547 /* DiscoverTableViewController.m in Sources */,
 				965805B71BF9F36A003D4547 /* WeChat.xcdatamodeld in Sources */,
+				966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */,
 				965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +560,7 @@
 				965805D81BF9F36A003D4547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		965805D91BF9F36A003D4547 /* Build configuration list for PBXNativeTarget "WeChatTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +569,7 @@
 				965805DB1BF9F36A003D4547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		965805DC1BF9F36A003D4547 /* Build configuration list for PBXNativeTarget "WeChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +578,7 @@
 				965805DE1BF9F36A003D4547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
