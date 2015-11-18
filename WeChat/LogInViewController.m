@@ -8,6 +8,8 @@
 
 #import "LogInViewController.h"
 
+#define TABLE_HIGHT     150
+
 @interface LogInViewController ()<UITableViewDataSource>{
     UITableView *_tableView;
 
@@ -53,7 +55,7 @@
     
     //table
     CGRect rect = [UIScreen mainScreen].bounds;
-    rect.size.height = 150;
+    rect.size.height = TABLE_HIGHT;
     _tableView = [[UITableView alloc]initWithFrame:rect style:UITableViewStylePlain];
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
@@ -90,6 +92,7 @@
     
     _pwdText = [[UITextField alloc]init];
     _pwdText.placeholder = @"Password";
+    _pwdText.secureTextEntry = true;
     
     [_pwdLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_pwdText setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -100,6 +103,7 @@
     [_loginBtn setTitle:@"Log In" forState:UIControlStateNormal];
     UIFont *loginFont = [UIFont systemFontOfSize:18.0];
     _loginBtn.titleLabel.font = loginFont;
+    [_loginBtn addTarget:self action:@selector(loginBtnAction:) forControlEvents:UIControlEventTouchDown];
     
     [_loginBtn setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:_loginBtn];
@@ -150,6 +154,7 @@
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_prefixLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:12]];
         
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_phoneText attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:130]];
+        [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_phoneText attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-70]];
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_phoneText attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:12]];
         
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_accessoryBtn attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-25]];
@@ -169,16 +174,21 @@
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_pwdLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:12]];
         
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_pwdText attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:130]];
+        [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_pwdText attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-70]];
         [cell.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_pwdText attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:12]];
     }
     
     return cell;
 }
 
+#pragma mark 动作方法
 -(void)accessoryBtnAction:(id)sender{
     _phoneText.text = @"";
     _phoneText.placeholder = @"18301005476";
     
     [_tableView reloadData];
+}
+-(void)loginBtnAction:(id)sender{
+    NSLog(@"loginBtnAction");
 }
 @end
