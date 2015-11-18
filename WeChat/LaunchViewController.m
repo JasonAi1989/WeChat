@@ -10,6 +10,8 @@
 
 @interface LaunchViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *logInBtn;
+@property (weak, nonatomic) IBOutlet UIButton *signUpBtn;
 
 @end
 
@@ -28,6 +30,12 @@
     // Do any additional setup after loading the view.
     
     [self UILayout];
+    
+    [self buttonHide:true];
+
+    if ([self localUserCheckIn] == false) {
+        [self buttonHide:false];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,11 +53,30 @@
 }
 */
 
+#pragma mark 自定义方法
 - (void)UILayout{
     self.imageView.image = [UIImage imageNamed:@"LaunchImage"];
     self.navigationController.navigationBar.hidden = true;
 }
 
+//在本地数据库中进行用户check in
+-(BOOL)localUserCheckIn{
+    return false;
+}
+
+-(void)buttonHide:(BOOL) flag{
+    if (flag) {
+        self.logInBtn.hidden = true;
+        self.signUpBtn.hidden = true;
+    }
+    else
+    {
+        self.logInBtn.hidden = false;
+        self.signUpBtn.hidden = false;
+    }
+}
+
+#pragma mark 重写方法
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"logIn"])

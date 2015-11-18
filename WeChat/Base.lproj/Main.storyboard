@@ -111,6 +111,8 @@
                     <navigationItem key="navigationItem" id="gwx-eb-EnM"/>
                     <connections>
                         <outlet property="imageView" destination="Dn4-OT-q5s" id="X9w-V3-WP4"/>
+                        <outlet property="logInBtn" destination="dwg-Rq-5C4" id="tKL-gB-1YR"/>
+                        <outlet property="signUpBtn" destination="tRx-QO-f2K" id="XZY-Qo-97k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
