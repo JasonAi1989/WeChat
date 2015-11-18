@@ -23,6 +23,8 @@
 		965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805EA1BF9F400003D4547 /* MeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966212D31BFB3F2800F06E89 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */; settings = {ASSET_TAGS = (); }; };
+		96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		965805F41BF9FFBC003D4547 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		966212D21BFB3F2800F06E89 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		966212D31BFB3F2800F06E89 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserCheckIn.h; sourceTree = "<group>"; };
+		96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserCheckIn.m; sourceTree = "<group>"; };
+		96BB2C9D1BFCAD1400234838 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 				965805E61BF9F400003D4547 /* DiscoverTableViewController.m */,
 				965805E91BF9F400003D4547 /* MeTableViewController.h */,
 				965805EA1BF9F400003D4547 /* MeTableViewController.m */,
+				96BB2C9D1BFCAD1400234838 /* MainTabBarController.h */,
+				96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */,
 				965805AC1BF9F36A003D4547 /* AppDelegate.h */,
 				965805AD1BF9F36A003D4547 /* AppDelegate.m */,
 				965805B21BF9F36A003D4547 /* Main.storyboard */,
@@ -192,6 +200,8 @@
 				965805E81BF9F400003D4547 /* LogInViewController.m */,
 				965805F31BF9FFBC003D4547 /* LaunchViewController.h */,
 				965805F41BF9FFBC003D4547 /* LaunchViewController.m */,
+				96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */,
+				96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */,
 			);
 			name = Launch;
 			sourceTree = "<group>";
@@ -327,9 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				965805EE1BF9F400003D4547 /* DbManager.m in Sources */,
+				96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */,
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
 				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
+				96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */,
 				965805AE1BF9F36A003D4547 /* AppDelegate.m in Sources */,
 				965805F01BF9F400003D4547 /* LogInViewController.m in Sources */,
 				965805AB1BF9F36A003D4547 /* main.m in Sources */,

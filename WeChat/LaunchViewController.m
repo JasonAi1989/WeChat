@@ -7,6 +7,7 @@
 //
 
 #import "LaunchViewController.h"
+#import "LocalUserCheckIn.h"
 
 @interface LaunchViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -31,11 +32,21 @@
     
     [self UILayout];
     
-    [self buttonHide:true];
-
-    if ([self localUserCheckIn] == false) {
-        [self buttonHide:false];
-    }
+    //////test
+    LocalUserCheckIn *user = [LocalUserCheckIn sharedLocalUserCheckIn];
+    [user saveUser:@"root" Password:@"123456"];
+    ///////
+    
+    
+//    [self buttonHide:true];
+//
+//    if ([self localUserCheckIn] == false) {
+//        [self buttonHide:false];
+//    }
+//
+//    UIViewController *secondview=[[UITabBarController alloc]init];
+//    
+//    [self.navigationController pushViewController:secondview animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,8 +72,11 @@
 
 //在本地数据库中进行用户check in
 -(BOOL)localUserCheckIn{
-    return false;
+    LocalUserCheckIn *user = [LocalUserCheckIn sharedLocalUserCheckIn];
+
+    return [user isUser];
 }
+
 
 -(void)buttonHide:(BOOL) flag{
     if (flag) {
