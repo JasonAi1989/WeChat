@@ -334,7 +334,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ul-Rk-kbS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chats" image="Chats" id="agP-D0-NNa"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="52x-5o-rCx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="52x-5o-rCx" customClass="WeChatNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -354,7 +354,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2sU-ZY-JjS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="Discover" id="iaw-iL-UQA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Or-ov-lQf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Or-ov-lQf" customClass="WeChatNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -374,7 +374,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O0g-Rj-In3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" image="Me" id="18c-vS-wO1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qsu-n8-Fe3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qsu-n8-Fe3" customClass="WeChatNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -394,7 +394,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tk0-8e-xaM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contacts" image="Contacts" id="Hpn-DT-4gi"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FPW-jd-Ez3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FPW-jd-Ez3" customClass="WeChatNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
