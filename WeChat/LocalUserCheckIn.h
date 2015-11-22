@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
+#import "UserModel.h"
 
 @interface LocalUserCheckIn : NSObject{
-    NSMutableString* _userName;
-    NSMutableString* _pwd;
+    UserModel* _localUser;
 }
 
 singleton_interface(LocalUserCheckIn);
 
--(BOOL)checkUser:(NSString*)user Password:(NSString*)pwd;
--(BOOL)saveUser:(NSString*)user Password:(NSString*)pwd;
+-(BOOL)checkUser:(UserModel*)user;
+-(BOOL)saveUser:(UserModel*)user;
 -(BOOL)isUser;
 
 @end

@@ -32,21 +32,21 @@
     
     [self UILayout];
     
-    //////test
-    LocalUserCheckIn *user = [LocalUserCheckIn sharedLocalUserCheckIn];
-    [user saveUser:@"root" Password:@"123456"];
-    ///////
     
-    
-//    [self buttonHide:true];
-//
-//    if ([self localUserCheckIn] == false) {
-//        [self buttonHide:false];
-//    }
-//
-//    UIViewController *secondview=[[UITabBarController alloc]init];
-//    
-//    [self.navigationController pushViewController:secondview animated:YES];
+    [self buttonHide:true];
+
+    if ([self localUserCheckIn] == false) {
+        [self buttonHide:false];
+    }
+    else
+    {
+        //"gotoMainViewController" 是segue的Identifier,在storyBoard上将两个界面直接连接，然后命名segue，此处则是调用此segue
+        [self performSegueWithIdentifier:@"gotoMainViewController" sender:self];
+        
+        // 这种方式是不通过storyBoard去自动显示下一个界面的方式
+        //    UIViewController *secondview=[[UITabBarController alloc]init];
+        //    [self.navigationController pushViewController:secondview animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

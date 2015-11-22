@@ -7,10 +7,12 @@
 //
 
 #import "LogInViewController.h"
+#import "UserModel.h"
+#import "LocalUserCheckIn.h"
 
 #define TABLE_HIGHT     150
 
-@interface LogInViewController ()<UITableViewDataSource>{
+@interface LogInViewController ()<UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>{
     UITableView *_tableView;
 
     UILabel *_countryLabel;
@@ -77,6 +79,8 @@
     
     _phoneText = [[UITextField alloc]init];
     _phoneText.placeholder = @"18301005476";
+    _phoneText.keyboardType = UIKeyboardTypeNumberPad;
+    _phoneText.delegate = self;
     
     _accessoryBtn = [[UIButton alloc]init];
     [_accessoryBtn setBackgroundImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
@@ -93,6 +97,7 @@
     _pwdText = [[UITextField alloc]init];
     _pwdText.placeholder = @"Password";
     _pwdText.secureTextEntry = true;
+    _pwdText.delegate = self;
     
     [_pwdLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_pwdText setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -190,5 +195,58 @@
 }
 -(void)loginBtnAction:(id)sender{
     NSLog(@"loginBtnAction");
+    
+    UserModel *userModel = [[UserModel alloc]init];
+    userModel.country = [NSMutableString stringWithFormat:@"China"];
+    userModel.phoneNumber = [NSMutableString stringWithString:_phoneText.text] ;
+    userModel.pwd = [NSMutableString stringWithString:_pwdText.text];
+    
+    LocalUserCheckIn *userCheck = [LocalUserCheckIn sharedLocalUserCheckIn];
+    if ([userCheck checkUser:userModel])
+    {
+        [self.navigationController popViewControllerAnimated:true];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No user" message:@"user does not exist, please sign up!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        
+        [alert show];
+    }
+}
+
+#pragma mark UIAlertView delegate optional
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+#pragma mark UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == _phoneText) {
+        if (string.length == 0)
+            return YES;
+        
+        NSInteger existedLength = textField.text.length;
+        NSInteger selectedLength = range.length;
+        NSInteger replaceLength = string.length;
+        if (existedLength - selectedLength + replaceLength > 11) {
+            return NO;
+        }
+    }
+    else if (textField == _pwdText){
+        if (string.length == 0)
+            return YES;
+        
+        NSInteger existedLength = textField.text.length;
+        NSInteger selectedLength = range.length;
+        NSInteger replaceLength = string.length;
+        if (existedLength - selectedLength + replaceLength > 32) {
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 @end

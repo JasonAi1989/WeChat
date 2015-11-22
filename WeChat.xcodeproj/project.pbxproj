@@ -23,6 +23,7 @@
 		965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805EA1BF9F400003D4547 /* MeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966212D31BFB3F2800F06E89 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91931C0188CB00FE9480 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91921C0188CB00FE9480 /* UserModel.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -77,6 +78,8 @@
 		965805F41BF9FFBC003D4547 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		966212D21BFB3F2800F06E89 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		966212D31BFB3F2800F06E89 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		96AE91911C0188CB00FE9480 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		96AE91921C0188CB00FE9480 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserCheckIn.h; sourceTree = "<group>"; };
 		96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserCheckIn.m; sourceTree = "<group>"; };
 		96BB2C9D1BFCAD1400234838 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				965805F41BF9FFBC003D4547 /* LaunchViewController.m */,
 				96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */,
 				96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */,
+				96AE91911C0188CB00FE9480 /* UserModel.h */,
+				96AE91921C0188CB00FE9480 /* UserModel.m */,
 			);
 			name = Launch;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			files = (
 				965805EE1BF9F400003D4547 /* DbManager.m in Sources */,
 				96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */,
+				96AE91931C0188CB00FE9480 /* UserModel.m in Sources */,
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
 				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
