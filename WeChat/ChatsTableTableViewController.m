@@ -35,6 +35,23 @@
 -(void)UILayout{
     self.navigationItem.title = @"WeChat";
     
+    UIBarButtonItem *search = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStyleDone target:self action:@selector(search)];
+    search.tintColor = [UIColor whiteColor]; //如果不写这句话，默认颜色是蓝色
+    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStyleDone target:self action:@selector(add)];
+    add.tintColor = [UIColor whiteColor];
+    
+    NSArray *array = @[add, search];
+    self.navigationItem.rightBarButtonItems = array;
+}
+
+#pragma mark action
+-(void)search{
+
+}
+
+-(void)add{
+
 }
 
 #pragma mark - Table view data source
