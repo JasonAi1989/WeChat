@@ -25,28 +25,18 @@
     self.navigationController.navigationBar.hidden = true;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [self localUserCheckInAndUILayout];
+}
+
 #pragma mark 好像只有在第一次显示此页面时，会调用此方法，与上面这个方法不一样。
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self UILayout];
-    
-    
-    [self buttonHide:true];
 
-    if ([self localUserCheckIn] == false) {
-        [self buttonHide:false];
-    }
-    else
-    {
-        //"gotoMainViewController" 是segue的Identifier,在storyBoard上将两个界面直接连接，然后命名segue，此处则是调用此segue
-        [self performSegueWithIdentifier:@"gotoMainViewController" sender:self];
-        
-        // 这种方式是不通过storyBoard去自动显示下一个界面的方式
-        //    UIViewController *secondview=[[UITabBarController alloc]init];
-        //    [self.navigationController pushViewController:secondview animated:YES];
-    }
+    [self localUserCheckInAndUILayout];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +58,23 @@
 - (void)UILayout{
     self.imageView.image = [UIImage imageNamed:@"LaunchImage"];
     self.navigationController.navigationBar.hidden = true;
+}
+
+-(void)localUserCheckInAndUILayout{
+    [self buttonHide:true];
+    
+    if ([self localUserCheckIn] == false) {
+        [self buttonHide:false];
+    }
+    else
+    {
+        //"gotoMainViewController" 是segue的Identifier,在storyBoard上将两个界面直接连接，然后命名segue，此处则是调用此segue
+        [self performSegueWithIdentifier:@"gotoMainViewController" sender:self];
+        
+        // 这种方式是不通过storyBoard去自动显示下一个界面的方式
+        //    UIViewController *secondview=[[UITabBarController alloc]init];
+        //    [self.navigationController pushViewController:secondview animated:YES];
+    }
 }
 
 //在本地数据库中进行用户check in

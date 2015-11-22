@@ -7,10 +7,12 @@
 //
 
 #import "SignUpViewController.h"
+#import "LocalUserCheckIn.h"
+#import "UserModel.h"
 
 #define TOPCELL_HIGHT   70
 #define TABLE_HIGHT     150
-@interface SignUpViewController ()<UITableViewDataSource>
+@interface SignUpViewController ()<UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
 {
     UILabel *_topLabel;
     UIButton *_iconButtn;
@@ -115,6 +117,8 @@
     
     _phoneText = [[UITextField alloc]init];
     _phoneText.placeholder = @"18301005476";
+    _phoneText.keyboardType = UIKeyboardTypeNumberPad;
+    _phoneText.delegate = self;
     
     [_prefixLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_phoneText setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -126,6 +130,7 @@
     _pwdText = [[UITextField alloc]init];
     _pwdText.placeholder = @"Password";
     _pwdText.secureTextEntry = true;
+    _pwdText.delegate = self;
     
     _accessoryBtn = [[UIButton alloc]init];
     [_accessoryBtn setBackgroundImage:[UIImage imageNamed:@"eye_slash"] forState:UIControlStateNormal];
@@ -225,7 +230,35 @@
 }
 -(void)signUpBtnAction:(id)sender{
     NSLog(@"signUpBtnAction");
+    
+    if (_fullNameText.text == nil
+        || _phoneText.text == nil
+        || _fullNameText.text == nil) {
+        return;
+    }
+    
+    UserModel *userModel = [[UserModel alloc]init];
+    userModel.country = [NSMutableString stringWithFormat:@"China"];
+    userModel.fullName = [NSMutableString stringWithString:_fullNameText.text];
+    userModel.phoneNumber = [NSMutableString stringWithString:_phoneText.text] ;
+    userModel.pwd = [NSMutableString stringWithString:_pwdText.text];
+    
+    
+    LocalUserCheckIn *userCheck = [LocalUserCheckIn sharedLocalUserCheckIn];
+    if ([userCheck saveUser:userModel])
+    {
+        [self.navigationController popViewControllerAnimated:true];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No user" message:@"Sign up fail!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        
+        [alert show];
+    }
 }
+
 -(void)accessoryBtnAction:(id)sender{
     NSLog(@"accessoryBtnAction");
     
@@ -242,4 +275,50 @@
         _pwdText.secureTextEntry = false;
     }
 }
+
+#pragma mark UIAlertView delegate optional
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+#pragma mark UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == _phoneText) {
+        if (string.length == 0)
+            return YES;
+        
+        NSInteger existedLength = textField.text.length;
+        NSInteger selectedLength = range.length;
+        NSInteger replaceLength = string.length;
+        if (existedLength - selectedLength + replaceLength > 11) {
+            return NO;
+        }
+    }
+    else if (textField == _pwdText){
+        if (string.length == 0)
+            return YES;
+        
+        NSInteger existedLength = textField.text.length;
+        NSInteger selectedLength = range.length;
+        NSInteger replaceLength = string.length;
+        if (existedLength - selectedLength + replaceLength > 32) {
+            return NO;
+        }
+    }
+    else if (textField == _fullNameText){
+        if (string.length == 0)
+            return YES;
+        
+        NSInteger existedLength = textField.text.length;
+        NSInteger selectedLength = range.length;
+        NSInteger replaceLength = string.length;
+        if (existedLength - selectedLength + replaceLength > 16) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 @end

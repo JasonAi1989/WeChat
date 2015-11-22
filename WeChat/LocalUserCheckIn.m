@@ -30,6 +30,7 @@ singleton_implementation(LocalUserCheckIn);
 -(BOOL)saveUser:(UserModel*)user{
     NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, true) lastObject];
     NSString *path=[documents stringByAppendingString:@"WeChatUser.arc"];
+//    NSLog(@"save path: %@", path);
     
     if (user == nil) {
         return false;
@@ -61,15 +62,20 @@ singleton_implementation(LocalUserCheckIn);
 -(void)loadLocalUser{
     NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, true) lastObject];
     NSString *path=[documents stringByAppendingString:@"WeChatUser.arc"];
-//    NSLog(@"%@", path);
+//    NSLog(@"load path: %@", path);
+    
     //NSArray解档
     NSArray *array=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
     if (array == nil) {
         return;
     }
+
+    if (_localUser == nil) {
+        _localUser = [[UserModel alloc]init];
+    }
     
     if (_localUser.country == nil) {
-        _localUser.country = [[NSMutableString alloc]initWithString:array[0]];
+        _localUser.country = [[NSMutableString alloc] initWithString:array[0]];
     }
     else if ([_localUser.country isEqualToString:array[0]] == false)
     {
