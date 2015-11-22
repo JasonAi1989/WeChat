@@ -33,6 +33,7 @@
 
 #pragma mark 自定义方法
 -(void)UILayout{
+    self.navigationItem.title = @"WeChat";
     
 }
 

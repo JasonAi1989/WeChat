@@ -24,7 +24,6 @@
 		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966212D31BFB3F2800F06E89 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		96AE91931C0188CB00FE9480 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91921C0188CB00FE9480 /* UserModel.m */; settings = {ASSET_TAGS = (); }; };
-		96AE91C51C01B4B500FE9480 /* WeChatNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91C41C01B4B500FE9480 /* WeChatNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -81,8 +80,6 @@
 		966212D31BFB3F2800F06E89 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		96AE91911C0188CB00FE9480 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		96AE91921C0188CB00FE9480 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		96AE91C31C01B4B500FE9480 /* WeChatNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatNavigationController.h; sourceTree = "<group>"; };
-		96AE91C41C01B4B500FE9480 /* WeChatNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatNavigationController.m; sourceTree = "<group>"; };
 		96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserCheckIn.h; sourceTree = "<group>"; };
 		96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserCheckIn.m; sourceTree = "<group>"; };
 		96BB2C9D1BFCAD1400234838 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -141,8 +138,6 @@
 				965805F21BF9F410003D4547 /* common */,
 				965805DF1BF9F400003D4547 /* ChatsTableTableViewController.h */,
 				965805E01BF9F400003D4547 /* ChatsTableTableViewController.m */,
-				96AE91C31C01B4B500FE9480 /* WeChatNavigationController.h */,
-				96AE91C41C01B4B500FE9480 /* WeChatNavigationController.m */,
 				965805E11BF9F400003D4547 /* ContactsTableViewController.h */,
 				965805E21BF9F400003D4547 /* ContactsTableViewController.m */,
 				965805E51BF9F400003D4547 /* DiscoverTableViewController.h */,
@@ -352,7 +347,6 @@
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
 				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
-				96AE91C51C01B4B500FE9480 /* WeChatNavigationController.m in Sources */,
 				96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */,
 				965805AE1BF9F36A003D4547 /* AppDelegate.m in Sources */,
 				965805F01BF9F400003D4547 /* LogInViewController.m in Sources */,
