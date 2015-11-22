@@ -1,5 +1,5 @@
 //
-//  WeChatNavigationBar.h
+//  WeChatNavigationController.h
 //  WeChat
 //
 //  Created by jason on 15/11/22.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WeChatNavigationBar : UINavigationBar
-
--(WeChatNavigationBar*)init;
-
--(void)navigationBarLayout;
+@interface WeChatNavigationController : UINavigationController
 
 @end
