@@ -7,8 +7,14 @@
 //
 
 #import "ChatsTableTableViewController.h"
+#import "ChatsCell.h"
+#import "Client+CoreDataProperties.h"
+#import "Message+CoreDataProperties.h"
 
 @interface ChatsTableTableViewController ()
+{
+    NSArray *_clients;
+}
 
 @end
 
@@ -19,11 +25,7 @@
     
     [self UILayout];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self addClient];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +47,17 @@
     self.navigationItem.rightBarButtonItems = array;
 }
 
+-(void)addClient{
+    Client *cli = [[Client alloc]init];
+    cli.clientName = @"Jason";
+    cli.iconImageURL = @"she";
+    Message *mes = [[Message alloc]init];
+    mes.content = @"Hello, Jason!";
+    mes.date = [NSDate date];
+    mes.client = cli;
+    [cli addMessagesObject:mes];
+}
+
 #pragma mark action
 -(void)search{
 
@@ -61,24 +74,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identify = @"Chats";
-    UITableViewCell *cell = nil;
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:identify];
+    static NSString *identtityKey=@"Chats";
+    ChatsCell *cell=[self.tableView dequeueReusableCellWithIdentifier:identtityKey];
+    if(cell==nil){
+        cell=[[ChatsCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identtityKey];
     }
-    
-    cell.textLabel.text = @"hello";
-    cell.detailTextLabel.text = @"detail";
-    
-    // Configure the cell...
+    cell.chatsCell=_clients[indexPath.row];
     
     return cell;
 }

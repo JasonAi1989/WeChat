@@ -24,6 +24,12 @@
 		965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965805F41BF9FFBC003D4547 /* LaunchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966212D31BFB3F2800F06E89 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		96AE91931C0188CB00FE9480 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91921C0188CB00FE9480 /* UserModel.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91C91C01CA3000FE9480 /* ChatsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91C81C01CA3000FE9480 /* ChatsCell.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91ED1C01E58900FE9480 /* Client+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91E61C01E58900FE9480 /* Client+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91EE1C01E58900FE9480 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91E81C01E58900FE9480 /* Client.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91EF1C01E58900FE9480 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91EA1C01E58900FE9480 /* Message+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91F01C01E58900FE9480 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91EC1C01E58900FE9480 /* Message.m */; settings = {ASSET_TAGS = (); }; };
+		96AE91F31C01EEBF00FE9480 /* ClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE91F21C01EEBF00FE9480 /* ClientService.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */; settings = {ASSET_TAGS = (); }; };
 		96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB2C9E1BFCAD1400234838 /* MainTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -80,6 +86,18 @@
 		966212D31BFB3F2800F06E89 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		96AE91911C0188CB00FE9480 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		96AE91921C0188CB00FE9480 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		96AE91C71C01CA3000FE9480 /* ChatsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatsCell.h; sourceTree = "<group>"; };
+		96AE91C81C01CA3000FE9480 /* ChatsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatsCell.m; sourceTree = "<group>"; };
+		96AE91E51C01E58900FE9480 /* Client+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Client+CoreDataProperties.h"; sourceTree = "<group>"; };
+		96AE91E61C01E58900FE9480 /* Client+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Client+CoreDataProperties.m"; sourceTree = "<group>"; };
+		96AE91E71C01E58900FE9480 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		96AE91E81C01E58900FE9480 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		96AE91E91C01E58900FE9480 /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Message+CoreDataProperties.h"; sourceTree = "<group>"; };
+		96AE91EA1C01E58900FE9480 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		96AE91EB1C01E58900FE9480 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		96AE91EC1C01E58900FE9480 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		96AE91F11C01EEBF00FE9480 /* ClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientService.h; sourceTree = "<group>"; };
+		96AE91F21C01EEBF00FE9480 /* ClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientService.m; sourceTree = "<group>"; };
 		96BB2C9A1BFC9BB300234838 /* LocalUserCheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserCheckIn.h; sourceTree = "<group>"; };
 		96BB2C9B1BFC9BB300234838 /* LocalUserCheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserCheckIn.m; sourceTree = "<group>"; };
 		96BB2C9D1BFCAD1400234838 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -134,8 +152,11 @@
 		965805A81BF9F36A003D4547 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				96AE91E41C01E3DA00FE9480 /* Model */,
+				96AE91D71C01DF9600FE9480 /* Service */,
+				96AE91C61C01C9F600FE9480 /* TableCell */,
 				966212D11BFB3E3C00F06E89 /* Launch */,
-				965805F21BF9F410003D4547 /* common */,
+				965805F21BF9F410003D4547 /* Common */,
 				965805DF1BF9F400003D4547 /* ChatsTableTableViewController.h */,
 				965805E01BF9F400003D4547 /* ChatsTableTableViewController.m */,
 				965805E11BF9F400003D4547 /* ContactsTableViewController.h */,
@@ -184,14 +205,14 @@
 			path = WeChatUITests;
 			sourceTree = "<group>";
 		};
-		965805F21BF9F410003D4547 /* common */ = {
+		965805F21BF9F410003D4547 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				965805EB1BF9F400003D4547 /* Singleton.h */,
 				965805E31BF9F400003D4547 /* DbManager.h */,
 				965805E41BF9F400003D4547 /* DbManager.m */,
 			);
-			name = common;
+			name = Common;
 			sourceTree = "<group>";
 		};
 		966212D11BFB3E3C00F06E89 /* Launch */ = {
@@ -209,6 +230,39 @@
 				96AE91921C0188CB00FE9480 /* UserModel.m */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		96AE91C61C01C9F600FE9480 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				96AE91C71C01CA3000FE9480 /* ChatsCell.h */,
+				96AE91C81C01CA3000FE9480 /* ChatsCell.m */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		96AE91D71C01DF9600FE9480 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				96AE91F11C01EEBF00FE9480 /* ClientService.h */,
+				96AE91F21C01EEBF00FE9480 /* ClientService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		96AE91E41C01E3DA00FE9480 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96AE91E51C01E58900FE9480 /* Client+CoreDataProperties.h */,
+				96AE91E61C01E58900FE9480 /* Client+CoreDataProperties.m */,
+				96AE91E71C01E58900FE9480 /* Client.h */,
+				96AE91E81C01E58900FE9480 /* Client.m */,
+				96AE91E91C01E58900FE9480 /* Message+CoreDataProperties.h */,
+				96AE91EA1C01E58900FE9480 /* Message+CoreDataProperties.m */,
+				96AE91EB1C01E58900FE9480 /* Message.h */,
+				96AE91EC1C01E58900FE9480 /* Message.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +395,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96AE91ED1C01E58900FE9480 /* Client+CoreDataProperties.m in Sources */,
 				965805EE1BF9F400003D4547 /* DbManager.m in Sources */,
 				96BB2C9F1BFCAD1400234838 /* MainTabBarController.m in Sources */,
+				96AE91EF1C01E58900FE9480 /* Message+CoreDataProperties.m in Sources */,
 				96AE91931C0188CB00FE9480 /* UserModel.m in Sources */,
 				965805EC1BF9F400003D4547 /* ChatsTableTableViewController.m in Sources */,
 				965805ED1BF9F400003D4547 /* ContactsTableViewController.m in Sources */,
 				965805F51BF9FFBC003D4547 /* LaunchViewController.m in Sources */,
 				96BB2C9C1BFC9BB300234838 /* LocalUserCheckIn.m in Sources */,
+				96AE91F01C01E58900FE9480 /* Message.m in Sources */,
+				96AE91F31C01EEBF00FE9480 /* ClientService.m in Sources */,
 				965805AE1BF9F36A003D4547 /* AppDelegate.m in Sources */,
+				96AE91EE1C01E58900FE9480 /* Client.m in Sources */,
 				965805F01BF9F400003D4547 /* LogInViewController.m in Sources */,
 				965805AB1BF9F36A003D4547 /* main.m in Sources */,
 				965805EF1BF9F400003D4547 /* DiscoverTableViewController.m in Sources */,
+				96AE91C91C01CA3000FE9480 /* ChatsCell.m in Sources */,
 				965805B71BF9F36A003D4547 /* WeChat.xcdatamodeld in Sources */,
 				966212D41BFB3F2800F06E89 /* SignUpViewController.m in Sources */,
 				965805F11BF9F400003D4547 /* MeTableViewController.m in Sources */,
